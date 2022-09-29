@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller  // HTTP requests are handled as a controller, using the @Controller annotation
 
 
-public class wordCount {
+public class WordCount {
      // @GetMapping handles GET request for /greet, maps it to greeting() method
      @GetMapping("/wordCount")
      // @RequestParam handles variables binding to frontend, defaults, etc
@@ -18,9 +18,12 @@ public class wordCount {
  
          // model attributes are visible to Thymeleaf when HTML is "pre-processed"
          model.addAttribute("word", word);
+
+         int letterNum = word.length();
+         model.addAttribute("letterNum", letterNum);
  
          // load HTML VIEW (greet.html)
-         return "greet"; 
+         return "wordCount"; 
  
      }
 }

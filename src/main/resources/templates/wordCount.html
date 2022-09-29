@@ -13,12 +13,12 @@
   <div class="px-4 py-5 my-5">
     <h3 class="display-5 fw-bold">Type a word</h3>
 
-    <form action="/wordCount" method="GET" id="greetForm">
+    <form action="/wordCount" method="GET" id="wordForm">
       <div>
         <label for="wordField">Enter word:</label>
-        <input name="name" id="greetField">
-        <button>Greetings!</button>
-        <p th:text="'Greetings, ' + ${name} + '!'"></p>
+        <input name="word" id="wordField">
+        <button>Calculate number of letters</button>
+        <p th:text=" ${letterNum} + '!'"></p>
       </div>
     </form>
   </div>
