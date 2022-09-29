@@ -12,12 +12,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 public class wordCount {
      // @GetMapping handles GET request for /greet, maps it to greeting() method
-     @GetMapping("/greet")
+     @GetMapping("/wordCount")
      // @RequestParam handles variables binding to frontend, defaults, etc
-     public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
+     public String greeting(@RequestParam(name="word", required=false, defaultValue="test") String word, Model model) {
  
          // model attributes are visible to Thymeleaf when HTML is "pre-processed"
-         model.addAttribute("name", name);
+         model.addAttribute("word", word);
  
          // load HTML VIEW (greet.html)
          return "greet"; 
